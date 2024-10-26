@@ -1,11 +1,23 @@
-import { Button } from '@/components/ui/button';
+import { Container, Filters, Title, TopBar } from '@/components/shared';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Button>Hello</Button>
-      </main>
-    </div>
+    <>
+      <Container>
+        <Title text={'All products'} size={'lg'} className={'font-extrabold mt-4'} />
+      </Container>
+
+      <TopBar />
+
+      <Container className="pb-14 mt-10">
+        <div className="flex gap-[60px]">
+          <div className="w-[250px]">
+            <Filters />
+          </div>
+
+          <div className="flex flex-col gap-16"></div>
+        </div>
+      </Container>
+    </>
   );
 }
